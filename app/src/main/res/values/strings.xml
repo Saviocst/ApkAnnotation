@@ -1,3 +1,7 @@
 <resources>
-    <string name="app_name">ApkAnotation</string>
+    <string name="app_name">ApkAnootation</string>
+    <string name="name_lembrete">Nome/Lembrete</string>
+    <string name="name_annotation">Anotação/Lembrete</string>
+    <string name="add_anootation">Adicionar</string>
+    <string name="annotation_fragment_sv">APK Anootation</string>
 </resources>

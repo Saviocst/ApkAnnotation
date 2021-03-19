@@ -1,39 +1,27 @@
 package com.example.apkanotation
 
-import android.content.DialogInterface
-import android.content.Intent
 import android.os.Bundle
-import android.widget.ImageView
-import android.widget.TextView
-import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
-import com.google.android.material.floatingactionbutton.FloatingActionButton
-import kotlin.collections.ArrayList
+import androidx.navigation.fragment.NavHostFragment
+import androidx.navigation.ui.AppBarConfiguration
+import androidx.navigation.ui.setupWithNavController
+import kotlinx.android.synthetic.main.activity_main.*
+// Parou no 14:43
 
 class MainActivity : AppCompatActivity() {
-
-    lateinit var rvMain: RecyclerView
-    lateinit var btnFloating: FloatingActionButton
-    lateinit var emptyImage: ImageView
-    lateinit var noData: TextView
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        rvMain = findViewById(R.id.recyclerView)
-        btnFloating = findViewById(R.id.add_button)
-        emptyImage = findViewById(R.id.empty_imageview)
-        noData = findViewById(R.id.no_data)
-
-
+        val navHostFragmentSv = supportFragmentManager.findFragmentById(R.id.nav_host_fragment) as NavHostFragment
+        val navController = navHostFragmentSv.navController
+        val appBarConfiguration = AppBarConfiguration(navController.graph)
+        toolbar_sv.setupWithNavController(navController, appBarConfiguration)
 
 
     }
-
 
 }
 
