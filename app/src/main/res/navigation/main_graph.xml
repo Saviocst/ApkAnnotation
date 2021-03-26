@@ -10,4 +10,5 @@
         android:name="com.example.apkanotation.ui.annotation.AnnotationFragment"
         android:label="@string/annotation_fragment_sv"
         tools:layout="@layout/annotation_fragment" />
+
 </navigation>
