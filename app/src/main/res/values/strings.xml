@@ -4,4 +4,6 @@
     <string name="name_annotation">Anotação/Lembrete</string>
     <string name="add_anootation">Adicionar</string>
     <string name="annotation_fragment_sv">APK Anootation</string>
+    <string name="annotation_inserted">Anotação inserida com sucesso</string>
+    <string name="annotation_error">"Erro ao inserir anotação "</string>
 </resources>

@@ -3,6 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".ui.annotation.AnnotationFragment">
 
@@ -33,6 +35,7 @@
         android:inputType="textCapSentences"/>
 
     <Button
+        android:id="@+id/btn_adicionar"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="@string/add_anootation"
