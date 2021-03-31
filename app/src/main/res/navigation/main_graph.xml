@@ -3,12 +3,19 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main_graph"
-    app:startDestination="@id/annotationFragment">
+    app:startDestination="@id/annotationListFragment">
 
+    <fragment
+        android:id="@+id/annotationListFragment"
+        android:name="com.example.apkanotation.ui.annotationlist.AnnotationListFragment"
+        android:label="annotation_list_fragment"
+        tools:layout="@layout/annotation_list_fragment" />
     <fragment
         android:id="@+id/annotationFragment"
         android:name="com.example.apkanotation.ui.annotation.AnnotationFragment"
         android:label="@string/annotation_fragment_sv"
-        tools:layout="@layout/annotation_fragment" />
+        tools:layout="@layout/annotation_fragment"/>
 
 </navigation>
+
+<!-- Video 9 -->
