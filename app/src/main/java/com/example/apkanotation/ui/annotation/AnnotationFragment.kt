@@ -8,6 +8,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
 import com.example.apkanotation.R
 import com.example.apkanotation.data.db.DataBaseSv
 import com.example.apkanotation.data.db.dao.AnnotationDAO
@@ -39,6 +40,8 @@ class AnnotationFragment : Fragment(R.layout.annotation_fragment) {
 
         observeEvents()
         setListeners()
+
+        //findNavController().popBackStack()
     }
 
 
@@ -48,6 +51,8 @@ class AnnotationFragment : Fragment(R.layout.annotation_fragment) {
                 is AnnotationViewModel.AnnotationState.Inserted -> {
                     clearFields()
                     hideKeyBoard()
+
+                    findNavController().popBackStack()
                 }
 
             }

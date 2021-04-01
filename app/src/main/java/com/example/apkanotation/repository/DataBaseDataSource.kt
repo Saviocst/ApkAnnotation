@@ -38,7 +38,7 @@ class DataBaseDataSource(
         annotationDAO.deleteAll()
     }
 
-    override suspend fun getAllAnnotation(): LiveData<List<AnnotationEntity>> {
+    override suspend fun getAllAnnotation(): List<AnnotationEntity> {
 
         return annotationDAO.getAll()
     }

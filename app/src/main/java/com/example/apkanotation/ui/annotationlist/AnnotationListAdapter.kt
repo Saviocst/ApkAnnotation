@@ -11,6 +11,8 @@ import kotlinx.android.synthetic.main.annotation_item.view.*
 
 class AnnotationListAdapter(private val annotations: List<AnnotationEntity>) : RecyclerView.Adapter<AnnotationListAdapter.AnnotationListViewHolder>() {
 
+    var onItemClick: ((entity: AnnotationEntity)-> Unit)? = null
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): AnnotationListViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.annotation_item, parent, false)
         return AnnotationListViewHolder(view)
@@ -22,7 +24,7 @@ class AnnotationListAdapter(private val annotations: List<AnnotationEntity>) : R
 
     override fun getItemCount() = annotations.size
 
-     class AnnotationListViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
+      inner class AnnotationListViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
 
          private val textViewRemember: TextView = itemView.text_remember_sv
          private val textViewAnnotation: TextView = itemView.text_annotation_sv
@@ -30,6 +32,10 @@ class AnnotationListAdapter(private val annotations: List<AnnotationEntity>) : R
          fun bindView(annotation: AnnotationEntity){
              textViewRemember.text = annotation.name
              textViewAnnotation.text = annotation.annotation
+
+             itemView.setOnClickListener {
+                 onItemClick?.invoke(annotation)
+             }
          }
     }
 }

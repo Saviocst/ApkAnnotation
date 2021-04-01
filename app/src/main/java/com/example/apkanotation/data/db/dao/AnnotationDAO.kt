@@ -23,6 +23,6 @@ interface AnnotationDAO {
     suspend fun deleteAll()
 
     @Query("SELECT * FROM annotation")
-    fun getAll(): LiveData<List<AnnotationEntity>>
+    suspend fun getAll(): List<AnnotationEntity>
 
 }

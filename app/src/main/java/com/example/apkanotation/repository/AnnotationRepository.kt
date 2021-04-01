@@ -13,5 +13,5 @@ interface AnnotationRepository {
 
     suspend fun deleteAllAnnotation()
 
-    suspend fun getAllAnnotation(): LiveData<List<AnnotationEntity>>
+    suspend fun getAllAnnotation(): List<AnnotationEntity>
 }
